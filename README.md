@@ -34,20 +34,44 @@ The purpose of this project was to create a binary classifier to predict the suc
 ### Compiling, Training, and Evaluating the Model
 - There were two layers in the model. The first layer has 80 neurons and the second has 30. These numbers were chosen to have neurons higher and lower than the input features which is 44. The activation function for the hidden layers was 'ReLU' since it is known to outperform other functions. 'Sigmoid' was used for the output layer since model is for a binary classification.
 - The target model performance is 75% but the model only produced an accuracy of 73.05%.
+<p align="middle">
+    <img src="https://github.com/samanthajpv/Neural_Network_Charity_Analysis/blob/92be5870b8b5413ed1467ec33193a97b86390365/Images/Initial%20Model.png" width="500" height="70"/>
+    <h5 align="center">Initial Model Accuracy</h5>
+</p>
 
 ### Optimization
 Below were steps taken to try and increase model performance:
-#### Trial 1: Add neurons
+#### Trial 1: Add Neurons
 The first modification was increasing the number of neurons for both layers (refer to the Optimization notebook). The accuracy decreased to 72.77%.
-#### Trial 2: Add hidden layer
+<p align="middle">
+    <img src="https://github.com/samanthajpv/Neural_Network_Charity_Analysis/blob/92be5870b8b5413ed1467ec33193a97b86390365/Images/Opt-1.png" width="500" height="70"/>
+    <h5 align="center">Optimization Model No.1 Accuracy</h5>
+</p>
+
+#### Trial 2: Add Hidden Layer
 From the initial model, a third layer was added to see if it will increase the accuracy. Comparing to the first trial, accuracy increased to 72.86% but is still lower than the initial model.
-#### Trial 3: Change activation
+<p align="middle">
+    <img src="https://github.com/samanthajpv/Neural_Network_Charity_Analysis/blob/92be5870b8b5413ed1467ec33193a97b86390365/Images/Opt-2.png" width="500" height="70"/>
+    <h5 align="center">Optimization Model No.2 Accuracy</h5>
+</p>
+
+#### Trial 3: Change Activation Function
 The third trial was changing the activation of the initial model to LeakyReLU. The model still did not reach the target performance with only 72.75%.
+<p align="middle">
+    <img src="https://github.com/samanthajpv/Neural_Network_Charity_Analysis/blob/92be5870b8b5413ed1467ec33193a97b86390365/Images/Opt-3.png" width="500" height="70"/>
+    <h5 align="center">Optimization Model No.3 Accuracy</h5>
+</p>
+
 #### Trial 4: Revisit Features
 Another modification done was to remove variables deemed to not have that much contribution to the model. Columns "STATUS" and "SPECIAL_CONSIDERATIONS" were dropped due to the count of its unique values. Although, model accuracy is still in the same range as the other trials with 72.79%.
+<p align="middle">
+    <img src="https://github.com/samanthajpv/Neural_Network_Charity_Analysis/blob/92be5870b8b5413ed1467ec33193a97b86390365/Images/Opt-4.png" width="500" height="70"/>
+    <h5 align="center">Optimization Model No.4 Accuracy</h5>
+</p>
 
 ## Summary
 The model has an accuracy of 72-73% and did not reach the target performance of 75% even with several modifications. Some epoch did reach an accuracy of 74% but the model appears to be overfitting based on the printed epoch accuracies. One recommendation is to add more data since neural networks will perform better with more information. Another recommendation could be revisiting the features and eliminating noisy variables by feature selection or binning.
 
 ## Reference
 (1) Trilogy Education Services. (2021, October). *Module 19 Challenge*. https://courses.bootcampspot.com/courses/626/assignments/13358?module_item_id=213881
+(2) P-Gn. (2019, December 19). Answer on the online question post *How do you use Keras LeakyReLU in Python?*. Stack Overflow. Retrieved on October 25, 2021 from https://stackoverflow.com/questions/48828478/how-do-you-use-keras-leakyrelu-in-python/48828561
