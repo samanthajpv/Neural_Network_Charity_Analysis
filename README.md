@@ -74,4 +74,5 @@ The model has an accuracy of 72-73% and did not reach the target performance of 
 
 ## Reference
 (1) Trilogy Education Services. (2021, October). *Module 19 Challenge*. https://courses.bootcampspot.com/courses/626/assignments/13358?module_item_id=213881
+
 (2) P-Gn. (2019, December 19). Answer on the online question post *How do you use Keras LeakyReLU in Python?*. Stack Overflow. Retrieved on October 25, 2021 from https://stackoverflow.com/questions/48828478/how-do-you-use-keras-leakyrelu-in-python/48828561
